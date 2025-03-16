@@ -1,0 +1,6 @@
+/* Задание 1. Анализ прибыли по категориям продуктов */
+SELECT p.CategoryID, SUM(od.Quantity*p.Price) As Sum
+from OrderDetails od
+join Orders o on od.OrderID = o.OrderID
+join Products p on od.ProductID = p.ProductID
+GROUP by p.CategoryID
