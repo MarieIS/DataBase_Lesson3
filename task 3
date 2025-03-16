@@ -1,0 +1,4 @@
+/* Задание 3. Средняя продолжительность кредитного срока для клиентов */
+SELECT education as 'Education Level', AVG(credit_term) as 'Average Credit Duration'
+FROM Clusters
+GROUP by education
